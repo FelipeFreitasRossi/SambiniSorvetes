@@ -1,147 +1,69 @@
+/* src/App.css (Adicione estas regras no final do arquivo) */
+
 /* ======================================= */
-/* 1. LAYOUT GERAL E SEÇÕES */
+/* 3. HERO (SEÇÃO PRINCIPAL) */
 /* ======================================= */
-
-.sambini-sorvetes-app {
+.hero-section {
+    background: url('https://i.postimg.cc/pdS6j5cy/sorvete.jpg') no-repeat center center/cover; /* Substitua pelo caminho da sua imagem */
+    height: 70vh; /* Altura padrão para telas maiores */
     display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Garante que o rodapé fique no final da página */
-    overflow-x: hidden; /* Previne barras de rolagem horizontais indesejadas */
-}
-
-main {
-    flex-grow: 1; /* Permite que o conteúdo principal ocupe o espaço restante */
-}
-
-/* 2. HEADER */
-.main-header {
-    background-color: var(--color-secondary); /* Azul Suave */
-    color: var(--color-white);
-    padding: 15px 0;
-    box-shadow: var(--shadow-medium);
-    position: sticky; /* Fica fixo no topo ao rolar */
-    top: 0;
-    z-index: 1000; /* Garante que fique acima de outros elementos */
-}
-
-.header-content {
-    display: flex;
-    justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
-}
-
-.logo h1 {
-    margin: 0;
-    font-size: 1.8em;
-    font-weight: 900;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-    /* Estilo Fun para o logo */
-    font-family: 'Comic Sans MS', cursive, sans-serif; 
-}
-
-.nav-menu ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-}
-
-.nav-menu li a {
-    color: var(--color-white);
-    text-decoration: none;
-    padding: 0 15px;
-    font-weight: 500;
-    transition: color 0.3s ease;
-}
-
-.nav-menu li a:hover {
-    color: var(--color-primary); /* Destaque Rosa no hover */
-}
-
-/* Responsividade do Header */
-@media (max-width: 768px) {
-    .header-content {
-        flex-direction: column;
-        gap: 15px;
-    }
-    .nav-menu ul {
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .nav-menu li {
-        margin: 5px 10px;
-    }
-}
-
-
-/* 3. RODAPÉ (FOOTER) */
-.main-footer {
-    background-color: var(--color-text-dark); /* Fundo Escuro */
-    color: var(--color-white);
-    padding: 30px 0 10px 0;
-}
-
-.footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    padding-bottom: 20px;
-    margin-bottom: 10px;
-    border-bottom: 1px solid #444;
-}
-
-.footer-logo h3 {
-    margin-top: 0;
-    color: var(--color-secondary);
-}
-
-.footer-logo p {
-    color: var(--color-text-light);
-    font-size: 0.9em;
-}
-
-.footer-navigation h4 {
-    color: var(--color-highlight);
-    margin-top: 0;
-}
-
-.footer-navigation ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-navigation li a {
-    color: var(--color-white);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-.footer-navigation li a:hover {
-    color: var(--color-highlight);
-}
-
-.footer-copyright {
     text-align: center;
-    font-size: 0.8em;
+    color: var(--color-white);
+    position: relative;
+    z-index: 1;
+    /* Efeito de sobreposição escura para melhorar a leitura do texto */
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.4); 
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-title {
+    font-size: 3.5em;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    font-weight: 900;
+}
+
+.hero-subtitle {
+    font-size: 1.3em;
+    margin-bottom: 40px;
+    font-weight: 300;
+}
+
+.hero-cta {
+    background-color: var(--color-primary); /* Rosa Vibrante para o CTA */
+    color: var(--color-white);
+}
+
+.hero-cta:hover {
+    background-color: #d81b60; /* Rosa escuro no hover */
+}
+
+
+/* ======================================= */
+/* 4. ABOUT (SOBRE A SORVETERIA) */
+/* ======================================= */
+.about-section {
+    background-color: var(--color-white);
+    padding: 80px 0;
+}
+
+.about-details {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 1.8;
     color: var(--color-text-light);
 }
 
-/* 4. ESTILOS DO CARDÁPIO (Para referência inicial) */
-.categoria-section h3 {
-    color: var(--color-primary);
-    border-bottom: 2px solid var(--color-highlight);
-    padding-bottom: 5px;
-    margin-bottom: 20px;
+.about-details p {
+    margin-bottom: 25px;
 }
 
-.cardapio-item {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px 0;
-    border-bottom: 1px dashed var(--color-text-light);
-}
-
-.cardapio-item:last-child {
-    border-bottom: none;
+.about-cta {
+    margin-top: 30px;
 }
